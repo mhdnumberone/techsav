@@ -1,0 +1,995 @@
+/**
+ * RTL CSS File - TechSavvyGenLtd
+ * Right-to-Left language support (Arabic)
+ */
+
+/* ========================================================================
+   RTL Base Configuration
+   ======================================================================== */
+
+html[dir="rtl"],
+body[dir="rtl"],
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ========================================================================
+   Arabic Typography
+   ======================================================================== */
+
+html[dir="rtl"] {
+  --font-family-primary: 'Cairo', 'Tajawal', Arial, sans-serif;
+  --font-family-secondary: 'Tajawal', 'Cairo', Arial, sans-serif;
+}
+
+html[dir="rtl"] body {
+  font-family: var(--font-family-secondary);
+}
+
+html[dir="rtl"] h1, 
+html[dir="rtl"] h2, 
+html[dir="rtl"] h3, 
+html[dir="rtl"] h4, 
+html[dir="rtl"] h5, 
+html[dir="rtl"] h6,
+html[dir="rtl"] .h1, 
+html[dir="rtl"] .h2, 
+html[dir="rtl"] .h3, 
+html[dir="rtl"] .h4, 
+html[dir="rtl"] .h5, 
+html[dir="rtl"] .h6 {
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+}
+
+/* Arabic text improvements */
+html[dir="rtl"] {
+  line-height: 1.8;
+  word-spacing: 0.1em;
+  letter-spacing: 0.02em;
+}
+
+html[dir="rtl"] p,
+html[dir="rtl"] .lead,
+html[dir="rtl"] .text-muted {
+  line-height: 1.9;
+}
+
+/* ========================================================================
+   Bootstrap RTL Overrides
+   ======================================================================== */
+
+/* Float utilities */
+html[dir="rtl"] .float-start {
+  float: right !important;
+}
+
+html[dir="rtl"] .float-end {
+  float: left !important;
+}
+
+/* Text alignment */
+html[dir="rtl"] .text-start {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .text-end {
+  text-align: left !important;
+}
+
+/* Margin and padding utilities */
+html[dir="rtl"] .ms-1 { margin-right: 0.25rem !important; margin-left: 0 !important; }
+html[dir="rtl"] .ms-2 { margin-right: 0.5rem !important; margin-left: 0 !important; }
+html[dir="rtl"] .ms-3 { margin-right: 1rem !important; margin-left: 0 !important; }
+html[dir="rtl"] .ms-4 { margin-right: 1.5rem !important; margin-left: 0 !important; }
+html[dir="rtl"] .ms-5 { margin-right: 3rem !important; margin-left: 0 !important; }
+html[dir="rtl"] .ms-auto { margin-right: auto !important; margin-left: 0 !important; }
+
+html[dir="rtl"] .me-1 { margin-left: 0.25rem !important; margin-right: 0 !important; }
+html[dir="rtl"] .me-2 { margin-left: 0.5rem !important; margin-right: 0 !important; }
+html[dir="rtl"] .me-3 { margin-left: 1rem !important; margin-right: 0 !important; }
+html[dir="rtl"] .me-4 { margin-left: 1.5rem !important; margin-right: 0 !important; }
+html[dir="rtl"] .me-5 { margin-left: 3rem !important; margin-right: 0 !important; }
+html[dir="rtl"] .me-auto { margin-left: auto !important; margin-right: 0 !important; }
+
+html[dir="rtl"] .ps-1 { padding-right: 0.25rem !important; padding-left: 0 !important; }
+html[dir="rtl"] .ps-2 { padding-right: 0.5rem !important; padding-left: 0 !important; }
+html[dir="rtl"] .ps-3 { padding-right: 1rem !important; padding-left: 0 !important; }
+html[dir="rtl"] .ps-4 { padding-right: 1.5rem !important; padding-left: 0 !important; }
+html[dir="rtl"] .ps-5 { padding-right: 3rem !important; padding-left: 0 !important; }
+
+html[dir="rtl"] .pe-1 { padding-left: 0.25rem !important; padding-right: 0 !important; }
+html[dir="rtl"] .pe-2 { padding-left: 0.5rem !important; padding-right: 0 !important; }
+html[dir="rtl"] .pe-3 { padding-left: 1rem !important; padding-right: 0 !important; }
+html[dir="rtl"] .pe-4 { padding-left: 1.5rem !important; padding-right: 0 !important; }
+html[dir="rtl"] .pe-5 { padding-left: 3rem !important; padding-right: 0 !important; }
+
+/* Border utilities */
+html[dir="rtl"] .border-start {
+  border-right: 1px solid var(--gray-300) !important;
+  border-left: 0 !important;
+}
+
+html[dir="rtl"] .border-end {
+  border-left: 1px solid var(--gray-300) !important;
+  border-right: 0 !important;
+}
+
+html[dir="rtl"] .border-start-0 {
+  border-right: 0 !important;
+}
+
+html[dir="rtl"] .border-end-0 {
+  border-left: 0 !important;
+}
+
+/* Rounded corners */
+html[dir="rtl"] .rounded-start {
+  border-top-right-radius: var(--border-radius) !important;
+  border-bottom-right-radius: var(--border-radius) !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+html[dir="rtl"] .rounded-end {
+  border-top-left-radius: var(--border-radius) !important;
+  border-bottom-left-radius: var(--border-radius) !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+/* ========================================================================
+   Navigation RTL
+   ======================================================================== */
+
+/* Top bar */
+html[dir="rtl"] .top-bar .contact-info {
+  text-align: left;
+}
+
+html[dir="rtl"] .top-bar .top-bar-right {
+  justify-content: flex-start !important;
+}
+
+html[dir="rtl"] .top-bar .language-switcher {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+/* Main navigation */
+html[dir="rtl"] .navbar-brand {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+html[dir="rtl"] .navbar-nav {
+  text-align: right;
+}
+
+html[dir="rtl"] .nav-link {
+  text-align: right;
+}
+
+html[dir="rtl"] .nav-link::after {
+  right: 50%;
+  left: auto;
+  transform: translateX(50%);
+}
+
+/* Dropdown menus */
+html[dir="rtl"] .dropdown-menu {
+  right: 0;
+  left: auto;
+  text-align: right;
+}
+
+html[dir="rtl"] .dropdown-menu[data-bs-popper] {
+  right: 0;
+  left: auto;
+}
+
+html[dir="rtl"] .dropdown-toggle::after {
+  margin-right: 0.255em;
+  margin-left: 0;
+}
+
+html[dir="rtl"] .dropdown-item {
+  text-align: right;
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+}
+
+/* Mobile menu */
+html[dir="rtl"] .navbar-toggler {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .navbar-collapse {
+  text-align: right;
+}
+
+/* ========================================================================
+   Forms RTL
+   ======================================================================== */
+
+html[dir="rtl"] .form-label {
+  text-align: right;
+}
+
+html[dir="rtl"] .form-control {
+  text-align: right;
+  direction: rtl;
+}
+
+html[dir="rtl"] .form-control::placeholder {
+  text-align: right;
+  direction: rtl;
+}
+
+html[dir="rtl"] .form-control[type="email"],
+html[dir="rtl"] .form-control[type="url"],
+html[dir="rtl"] .form-control[type="number"] {
+  direction: ltr;
+  text-align: left;
+}
+
+html[dir="rtl"] .form-select {
+  background-position: left 0.75rem center;
+  padding-left: 2.25rem;
+  padding-right: 0.75rem;
+}
+
+html[dir="rtl"] .form-check {
+  text-align: right;
+  padding-right: 1.5em;
+  padding-left: 0;
+}
+
+html[dir="rtl"] .form-check-input {
+  margin-right: -1.5em;
+  margin-left: 0;
+}
+
+html[dir="rtl"] .form-check-label {
+  padding-right: 0.5em;
+  padding-left: 0;
+}
+
+/* Input groups */
+html[dir="rtl"] .input-group > .form-control:not(:last-child),
+html[dir="rtl"] .input-group > .form-select:not(:last-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+html[dir="rtl"] .input-group > .form-control:not(:first-child),
+html[dir="rtl"] .input-group > .form-select:not(:first-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+html[dir="rtl"] .input-group-text {
+  text-align: center;
+}
+
+/* Validation icons */
+html[dir="rtl"] .form-control.is-valid {
+  background-position: left calc(0.375em + 0.1875rem) center;
+  padding-left: calc(1.5em + 0.75rem);
+  padding-right: 0.75rem;
+}
+
+html[dir="rtl"] .form-control.is-invalid {
+  background-position: left calc(0.375em + 0.1875rem) center;
+  padding-left: calc(1.5em + 0.75rem);
+  padding-right: 0.75rem;
+}
+
+/* ========================================================================
+   Buttons RTL
+   ======================================================================== */
+
+html[dir="rtl"] .btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+html[dir="rtl"] .btn-group > .btn:not(:first-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+html[dir="rtl"] .btn .fa,
+html[dir="rtl"] .btn .fas,
+html[dir="rtl"] .btn .far,
+html[dir="rtl"] .btn .fab {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+html[dir="rtl"] .btn i + span,
+html[dir="rtl"] .btn .fa + span,
+html[dir="rtl"] .btn .fas + span,
+html[dir="rtl"] .btn .far + span,
+html[dir="rtl"] .btn .fab + span {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+/* ========================================================================
+   Cards RTL
+   ======================================================================== */
+
+html[dir="rtl"] .card-img-overlay {
+  padding: 1.25rem;
+  text-align: right;
+}
+
+/* Product/Service cards */
+html[dir="rtl"] .product-badges,
+html[dir="rtl"] .service-badges {
+  right: auto;
+  left: 0.75rem;
+}
+
+html[dir="rtl"] .product-actions {
+  text-align: center;
+}
+
+/* ========================================================================
+   Authentication Pages RTL
+   ======================================================================== */
+
+html[dir="rtl"] .auth-header {
+  text-align: center;
+}
+
+html[dir="rtl"] .auth-links {
+  text-align: center;
+}
+
+html[dir="rtl"] .password-strength {
+  direction: ltr;
+}
+
+html[dir="rtl"] .strength-meter {
+  direction: ltr;
+}
+
+html[dir="rtl"] .strength-text {
+  text-align: right;
+  direction: rtl;
+}
+
+/* ========================================================================
+   Tables RTL
+   ======================================================================== */
+
+html[dir="rtl"] .table {
+  text-align: right;
+}
+
+html[dir="rtl"] .table th,
+html[dir="rtl"] .table td {
+  text-align: right;
+}
+
+html[dir="rtl"] .table th:first-child,
+html[dir="rtl"] .table td:first-child {
+  border-right: 0;
+}
+
+html[dir="rtl"] .table th:last-child,
+html[dir="rtl"] .table td:last-child {
+  border-left: 0;
+}
+
+/* ========================================================================
+   Breadcrumbs RTL
+   ======================================================================== */
+
+html[dir="rtl"] .breadcrumb {
+  direction: rtl;
+}
+
+html[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
+  float: right;
+  margin-right: 0.5rem;
+  margin-left: 0;
+  content: "‹";
+}
+
+/* ========================================================================
+   Pagination RTL
+   ======================================================================== */
+
+html[dir="rtl"] .pagination {
+  direction: rtl;
+}
+
+html[dir="rtl"] .page-link {
+  margin-right: -1px;
+  margin-left: 0;
+}
+
+html[dir="rtl"] .page-item:first-child .page-link {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+html[dir="rtl"] .page-item:last-child .page-link {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* ========================================================================
+   Alerts RTL
+   ======================================================================== */
+
+html[dir="rtl"] .alert {
+  text-align: right;
+}
+
+html[dir="rtl"] .alert-dismissible .btn-close {
+  left: 0;
+  right: auto;
+  padding: 0.75rem 1.25rem 0.75rem 0;
+}
+
+/* ========================================================================
+   Modal RTL
+   ======================================================================== */
+
+html[dir="rtl"] .modal-header {
+  text-align: right;
+}
+
+html[dir="rtl"] .modal-header .btn-close {
+  margin: -0.5rem 0 -0.5rem auto;
+}
+
+html[dir="rtl"] .modal-footer {
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] .modal-footer > * {
+  margin: 0.25rem 0.25rem 0.25rem 0;
+}
+
+/* ========================================================================
+   Shopping Cart RTL
+   ======================================================================== */
+
+html[dir="rtl"] .cart-item {
+  text-align: right;
+}
+
+html[dir="rtl"] .item-details {
+  text-align: right;
+}
+
+html[dir="rtl"] .item-actions {
+  text-align: left;
+}
+
+html[dir="rtl"] .cart-summary {
+  text-align: right;
+}
+
+html[dir="rtl"] .summary-line {
+  justify-content: space-between;
+}
+
+html[dir="rtl"] .quantity-control {
+  direction: ltr;
+}
+
+html[dir="rtl"] .quantity-control .input-group {
+  direction: ltr;
+}
+
+/* ========================================================================
+   Profile Page RTL
+   ======================================================================== */
+
+html[dir="rtl"] .profile-card {
+  text-align: center;
+}
+
+html[dir="rtl"] .profile-nav .nav-link {
+  text-align: right;
+}
+
+html[dir="rtl"] .profile-content {
+  text-align: right;
+}
+
+/* ========================================================================
+   Footer RTL
+   ======================================================================== */
+
+html[dir="rtl"] .footer-main {
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-links a:hover {
+  padding-right: 0.5rem;
+  padding-left: 0;
+}
+
+html[dir="rtl"] .contact-info i {
+  margin-left: 0.75rem;
+  margin-right: 0;
+}
+
+html[dir="rtl"] .social-icons {
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] .footer-bottom-links {
+  text-align: right;
+}
+
+/* ========================================================================
+   Hero Section RTL
+   ======================================================================== */
+
+html[dir="rtl"] .hero-content {
+  text-align: right;
+}
+
+html[dir="rtl"] .hero-buttons {
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] .hero-buttons .btn {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+html[dir="rtl"] .hero-buttons .btn:first-child {
+  margin-left: 0;
+}
+
+/* ========================================================================
+   Back to Top Button RTL
+   ======================================================================== */
+
+html[dir="rtl"] .back-to-top {
+  right: auto;
+  left: 2rem;
+}
+
+/* ========================================================================
+   Notifications RTL
+   ======================================================================== */
+
+html[dir="rtl"] .notification-container {
+  right: auto;
+  left: 2rem;
+}
+
+html[dir="rtl"] .notification {
+  transform: translateX(-100%);
+  border-right: 4px solid var(--info-color);
+  border-left: none;
+  text-align: right;
+}
+
+html[dir="rtl"] .notification.show {
+  transform: translateX(0);
+}
+
+html[dir="rtl"] .notification.hide {
+  transform: translateX(-100%);
+}
+
+html[dir="rtl"] .notification-close {
+  margin-right: 1rem;
+  margin-left: 0;
+}
+
+/* ========================================================================
+   Icon Adjustments RTL
+   ======================================================================== */
+
+/* Flip directional icons */
+html[dir="rtl"] .fa-arrow-left::before {
+  content: "\f061"; /* fa-arrow-right */
+}
+
+html[dir="rtl"] .fa-arrow-right::before {
+  content: "\f060"; /* fa-arrow-left */
+}
+
+html[dir="rtl"] .fa-chevron-left::before {
+  content: "\f054"; /* fa-chevron-right */
+}
+
+html[dir="rtl"] .fa-chevron-right::before {
+  content: "\f053"; /* fa-chevron-left */
+}
+
+html[dir="rtl"] .fa-angle-left::before {
+  content: "\f105"; /* fa-angle-right */
+}
+
+html[dir="rtl"] .fa-angle-right::before {
+  content: "\f104"; /* fa-angle-left */
+}
+
+html[dir="rtl"] .fa-caret-left::before {
+  content: "\f0da"; /* fa-caret-right */
+}
+
+html[dir="rtl"] .fa-caret-right::before {
+  content: "\f0d9"; /* fa-caret-left */
+}
+
+/* Icons in text */
+html[dir="rtl"] i + span,
+html[dir="rtl"] .fa + span,
+html[dir="rtl"] .fas + span,
+html[dir="rtl"] .far + span,
+html[dir="rtl"] .fab + span {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+html[dir="rtl"] span + i,
+html[dir="rtl"] span + .fa,
+html[dir="rtl"] span + .fas,
+html[dir="rtl"] span + .far,
+html[dir="rtl"] span + .fab {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+/* ========================================================================
+   Lists RTL
+   ======================================================================== */
+
+html[dir="rtl"] ul,
+html[dir="rtl"] ol {
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+html[dir="rtl"] li {
+  text-align: right;
+}
+
+html[dir="rtl"] .list-unstyled {
+  padding-right: 0;
+}
+
+html[dir="rtl"] .list-inline-item {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+html[dir="rtl"] .list-inline-item:not(:last-child) {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+/* ========================================================================
+   Badges and Labels RTL
+   ======================================================================== */
+
+html[dir="rtl"] .badge {
+  text-align: center;
+}
+
+/* ========================================================================
+   Progress Bars RTL
+   ======================================================================== */
+
+html[dir="rtl"] .progress {
+  direction: ltr;
+}
+
+html[dir="rtl"] .progress-bar {
+  direction: ltr;
+}
+
+/* ========================================================================
+   Accordion RTL
+   ======================================================================== */
+
+html[dir="rtl"] .accordion-button {
+  text-align: right;
+  padding-right: 1.25rem;
+  padding-left: 3rem;
+}
+
+html[dir="rtl"] .accordion-button::after {
+  margin-right: auto;
+  margin-left: 0;
+  order: -1;
+}
+
+html[dir="rtl"] .accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+
+/* ========================================================================
+   Carousel RTL
+   ======================================================================== */
+
+html[dir="rtl"] .carousel-control-prev {
+  right: 0;
+  left: auto;
+}
+
+html[dir="rtl"] .carousel-control-next {
+  left: 0;
+  right: auto;
+}
+
+html[dir="rtl"] .carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='m11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+html[dir="rtl"] .carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* ========================================================================
+   Tooltips RTL
+   ======================================================================== */
+
+html[dir="rtl"] .tooltip {
+  text-align: center;
+}
+
+html[dir="rtl"] .tooltip-inner {
+  text-align: center;
+}
+
+/* ========================================================================
+   Responsive RTL Adjustments
+   ======================================================================== */
+
+/* Small devices */
+@media (max-width: 575.98px) {
+  html[dir="rtl"] .notification-container {
+    left: 1rem;
+    right: 1rem;
+  }
+  
+  html[dir="rtl"] .back-to-top {
+    left: 1rem;
+  }
+  
+  html[dir="rtl"] .hero-buttons {
+    justify-content: center;
+  }
+  
+  html[dir="rtl"] .hero-buttons .btn {
+    margin: 0.5rem;
+  }
+}
+
+/* Medium devices */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  html[dir="rtl"] .hero-content {
+    text-align: center;
+  }
+}
+
+/* ========================================================================
+   Print RTL
+   ======================================================================== */
+
+@media print {
+  html[dir="rtl"] body {
+    direction: rtl;
+    text-align: right;
+  }
+  
+  html[dir="rtl"] .container {
+    direction: rtl;
+  }
+}
+
+/* ========================================================================
+   Custom Components RTL
+   ======================================================================== */
+
+/* Timeline RTL */
+html[dir="rtl"] .timeline-item {
+  text-align: right;
+}
+
+html[dir="rtl"] .timeline-marker {
+  right: 0;
+  left: auto;
+}
+
+html[dir="rtl"] .timeline-content {
+  margin-right: 3rem;
+  margin-left: 0;
+}
+
+/* Star Rating RTL */
+html[dir="rtl"] .star-rating {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Price Display RTL */
+html[dir="rtl"] .price {
+  direction: ltr;
+  text-align: left;
+}
+
+html[dir="rtl"] .currency {
+  direction: ltr;
+}
+
+/* Search Results RTL */
+html[dir="rtl"] .search-results {
+  text-align: right;
+}
+
+html[dir="rtl"] .search-highlight {
+  direction: rtl;
+}
+
+/* Sidebar RTL */
+html[dir="rtl"] .sidebar {
+  text-align: right;
+}
+
+html[dir="rtl"] .sidebar .widget-title {
+  text-align: right;
+}
+
+/* Filter Controls RTL */
+html[dir="rtl"] .filter-item {
+  text-align: right;
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] .sort-options {
+  text-align: right;
+}
+
+/* ========================================================================
+   Animation Adjustments RTL
+   ======================================================================== */
+
+@keyframes slideInRight-rtl {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideInLeft-rtl {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+html[dir="rtl"] .animate-slide-in-left {
+  animation: slideInRight-rtl 0.6s ease-out;
+}
+
+html[dir="rtl"] .animate-slide-in-right {
+  animation: slideInLeft-rtl 0.6s ease-out;
+}
+
+/* ========================================================================
+   Utility Classes RTL
+   ======================================================================== */
+
+/* RTL-specific utilities */
+.rtl-only {
+  display: none;
+}
+
+html[dir="rtl"] .rtl-only {
+  display: initial;
+}
+
+html[dir="rtl"] .ltr-only {
+  display: none;
+}
+
+.text-start-rtl {
+  text-align: right;
+}
+
+.text-end-rtl {
+  text-align: left;
+}
+
+html[dir="rtl"] .text-start-rtl {
+  text-align: right;
+}
+
+html[dir="rtl"] .text-end-rtl {
+  text-align: left;
+}
+
+/* Margin utilities for RTL */
+.me-rtl-1 { margin-left: 0.25rem; }
+.me-rtl-2 { margin-left: 0.5rem; }
+.me-rtl-3 { margin-left: 1rem; }
+.me-rtl-4 { margin-left: 1.5rem; }
+.me-rtl-5 { margin-left: 3rem; }
+
+.ms-rtl-1 { margin-right: 0.25rem; }
+.ms-rtl-2 { margin-right: 0.5rem; }
+.ms-rtl-3 { margin-right: 1rem; }
+.ms-rtl-4 { margin-right: 1.5rem; }
+.ms-rtl-5 { margin-right: 3rem; }
+
+html[dir="rtl"] .me-rtl-1 { margin-left: 0.25rem; margin-right: 0; }
+html[dir="rtl"] .me-rtl-2 { margin-left: 0.5rem; margin-right: 0; }
+html[dir="rtl"] .me-rtl-3 { margin-left: 1rem; margin-right: 0; }
+html[dir="rtl"] .me-rtl-4 { margin-left: 1.5rem; margin-right: 0; }
+html[dir="rtl"] .me-rtl-5 { margin-left: 3rem; margin-right: 0; }
+
+html[dir="rtl"] .ms-rtl-1 { margin-right: 0.25rem; margin-left: 0; }
+html[dir="rtl"] .ms-rtl-2 { margin-right: 0.5rem; margin-left: 0; }
+html[dir="rtl"] .ms-rtl-3 { margin-right: 1rem; margin-left: 0; }
+html[dir="rtl"] .ms-rtl-4 { margin-right: 1.5rem; margin-left: 0; }
+html[dir="rtl"] .ms-rtl-5 { margin-right: 3rem; margin-left: 0; }
+
+/* Border utilities for RTL */
+html[dir="rtl"] .border-start-rtl {
+  border-right: 1px solid var(--gray-300);
+}
+
+html[dir="rtl"] .border-end-rtl {
+  border-left: 1px solid var(--gray-300);
+}
+
+/* ========================================================================
+   Performance Optimizations RTL
+   ======================================================================== */
+
+/* Contain layout shifts for RTL */
+html[dir="rtl"] .contain-layout {
+  contain: layout style;
+}
+
+/* Optimize text rendering for Arabic */
+html[dir="rtl"] {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================================================
+   Accessibility RTL
+   ======================================================================== */
+
+html[dir="rtl"] .sr-only-rtl {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Focus styles for RTL */
+html[dir="rtl"] .btn:focus,
+html[dir="rtl"] .form-control:focus,
+html[dir="rtl"] .form-select:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
